@@ -20,9 +20,6 @@ Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only
   box-sizing: inherit;
   font-family: inherit; }
 
-:root {
-  --heading-secondary-after-bg: $themeClrPrimary; }
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
@@ -106,7 +103,7 @@ textarea {
     top: calc(100% + 1.5rem);
     height: 5px;
     width: 3rem;
-    background: var(--heading-secondary-after-bg);
+    background: #0062b9;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px; }
@@ -147,7 +144,10 @@ textarea {
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform .3s; }
+  .btn:hover {
+    transform: translateY(-3px); }
   .btn--bg {
     padding: 1.5rem 8rem;
     font-size: 2rem; }
@@ -179,6 +179,9 @@ textarea {
   @media only screen and (max-width: 37.5em) {
     .text-primary {
       font-size: 2rem; } }
+
+.d-none {
+  display: none; }
 
 .home-hero {
   color: #fff;
@@ -215,7 +218,10 @@ textarea {
     width: 100%;
     display: block;
     padding: 1.2rem;
-    border-bottom: 2px solid #eee; }
+    border-bottom: 2px solid #eee;
+    transition: background .3s; }
+    .home-hero__social-icon-link:hover {
+      background: rgba(255, 255, 255, 0.1); }
     .home-hero__social-icon-link--bd-none {
       border-bottom: 0; }
   .home-hero__social-icon {
@@ -505,7 +511,11 @@ textarea {
   .header__logo-container {
     display: flex;
     align-items: center;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #333;
+    transition: color .3s; }
+    .header__logo-container:hover {
+      color: #0062b9; }
   .header__logo-img-cont {
     width: 5rem;
     height: 5rem;
@@ -528,7 +538,6 @@ textarea {
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 700;
-    color: #333;
     letter-spacing: 1px; }
   .header__links {
     display: flex; }
@@ -542,7 +551,10 @@ textarea {
     color: #333;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 700; }
+    font-weight: 700;
+    transition: color .3s; }
+    .header__link:hover {
+      color: #0062b9; }
     @media only screen and (max-width: 56.25em) {
       .header__link {
         padding: 3rem 1.8rem;
@@ -556,20 +568,26 @@ textarea {
         display: block; } }
   .header__main-ham-menu {
     width: 100%; }
+  .header__main-ham-menu-close {
+    width: 100%; }
   .header__sm-menu {
     background: #fff;
     position: absolute;
     width: 100%;
     top: 100%;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1); }
     .header__sm-menu--active {
-      display: none; }
+      visibility: hidden;
+      opacity: 0; }
       @media only screen and (max-width: 37.5em) {
         .header__sm-menu--active {
-          display: block; } }
+          visibility: visible;
+          opacity: 1; } }
   .header__sm-menu-link a {
     display: block;
     text-decoration: none;
@@ -580,7 +598,10 @@ textarea {
     border-bottom: 1px solid #eee;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    transition: color .3s; }
+    .header__sm-menu-link a:hover {
+      color: #0062b9; }
   .header__sm-menu-link:first-child a {
     border-top: 1px solid #eee; }
   .header__sm-menu-link-last {
@@ -630,6 +651,10 @@ textarea {
     font-size: 1.2rem;
     text-align: left;
     text-align: center; }
+    .main-footer__lower a {
+      text-decoration: underline;
+      font-weight: bold;
+      margin-left: 2px; }
     @media only screen and (max-width: 56.25em) {
       .main-footer__lower {
         padding: 3.5rem 0; } }

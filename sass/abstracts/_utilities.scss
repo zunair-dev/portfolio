@@ -45,7 +45,7 @@
       top: calc(100% + 1.5rem);
       height: 5px;
       width: 3rem;
-      background: var(--heading-secondary-after-bg);
+      background: $themeClrPrimary;
       left: 50%;
       transform: translateX(-50%);
       border-radius: $commonBorderRadius;
@@ -97,6 +97,11 @@
   font-weight: 700;
   border-radius: $commonBorderRadius;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform .3s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 
   &--bg {
     padding: 1.5rem 8rem;
@@ -137,4 +142,9 @@
   @include respond(phone) {
     font-size: 2rem;
   }
+}
+
+
+.d-none {
+  display: none;
 }

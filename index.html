@@ -15,12 +15,14 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="header__content">
         <div class="header__logo-container">
           <div class="header__logo-img-cont">
+            <!-- TODO -->
             <img
               src="./assets/png/john-doe.png"
               alt="Zunair Logo Image"
@@ -36,6 +38,11 @@
             </li>
             <li class="header__link-wrapper">
               <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#resume" class="header__link">
+                Resume
+              </a>
             </li>
             <li class="header__link-wrapper">
               <a href="./index.html#projects" class="header__link">
@@ -69,6 +76,11 @@
 
             <li class="header__sm-menu-link">
               <a href="./index.html#about"> About </a>
+            </li>
+
+            <!-- TODO -->
+            <li class="header__sm-menu-link">
+              <a href="./index.html#resume"> Resume </a>
             </li>
 
             <li class="header__sm-menu-link">
@@ -171,8 +183,8 @@
               <p class="about__content-details-para">
                 Hey! It's
                 <strong>Muhammad Zunair</strong>
-                and I'm a <strong> Frontend Web Developer </strong> located in
-                Los Angeles. I've done
+                and I'm a <strong> Full Stack Ruby on Rails Developer </strong> located in
+                Lahore. I've done
                 <strong> remote </strong>
                 projects for agencies, consulted for startups, and collaborated
                 with talented people to create
@@ -392,41 +404,38 @@
             Feel free to contact me anytime!
           </span>
         </h2>
+        <div class="contact__info">
+          <div class="contact__info-item">
+            <i class="fas fa-envelope contact__info-icon"></i>
+            <p class="contact__info-text">Email Me</p>
+            <p class="contact__info-detail">zunair.dev@gmail.com</p>
+          </div>
+          <div class="contact__info-item">
+            <i class="fas fa-phone contact__info-icon"></i>
+            <p class="contact__info-text">Call Me</p>
+            <p class="contact__info-detail">+92 304 4885908</p>
+          </div>
+          <div class="contact__info-item">
+            <i class="fab fa-whatsapp contact__info-icon"></i>
+            <p class="contact__info-text">Whatsapp Me</p>
+            <p class="contact__info-detail">+92 304 4885908</p>
+          </div>
+        </div>
         <div class="contact__form-container">
           <form action="#" class="contact__form">
             <div class="contact__form-field">
               <label class="contact__form-label" for="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-              />
+              <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
             </div>
             <div class="contact__form-field">
               <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
+              <input required placeholder="Enter Your Email" type="text" class="contact__form-input" name="email"
+                id="email" />
             </div>
             <div class="contact__form-field">
               <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
+              <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message"
+                name="message" id="message"></textarea>
             </div>
             <button type="submit" class="btn btn--theme contact__btn">
               Submit
@@ -435,6 +444,7 @@
         </div>
       </div>
     </section>
+
     <footer class="main-footer">
       <div class="main-container">
         <div class="main-footer__upper">
